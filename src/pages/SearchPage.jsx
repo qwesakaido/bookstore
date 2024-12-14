@@ -16,7 +16,7 @@ export function SearchPage() {
 
     return (
         <div className="search-page">
-            <h1>Search Books</h1>
+            {/* <h1>Search Books</h1> */}
             <div className="search-bar">
                 <input
                     type="text"
@@ -32,7 +32,7 @@ export function SearchPage() {
                     {searchResults.books.map((book) => (
                         <BookCard key={book.isbn13} book={book} />
                     ))}
-                    {/* <button onClick={() => setPage((prev) => prev + 1)}>Next Page</button> */}
+                    <button onClick={() => setPage((prev) => prev + 1)}>Next Page</button>
                 </div>
             )}
         </div>
