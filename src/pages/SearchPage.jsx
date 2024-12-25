@@ -16,7 +16,6 @@ export function SearchPage() {
 
     return (
         <div className="search-page">
-            {/* <h1>Search Books</h1> */}
             <div className="search-bar">
                 <input
                     type="text"

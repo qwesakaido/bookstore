@@ -41,10 +41,10 @@ export function BookPage() {
                             onClick={() => dispatch(openModal(bookDetails.image))}
                         />
                         <div className="book-info">
-                            <p className="book-desc">{bookDetails.desc}</p>
                             <p><strong>Автор:</strong> {bookDetails.authors}</p>
                             <p><strong>Цена:</strong> {bookDetails.price}</p>
                             <p><strong>Язык:</strong> {bookDetails.language}</p>
+                            <p className="book-desc">{bookDetails.desc}</p>
                         </div>
                     </div>
 
