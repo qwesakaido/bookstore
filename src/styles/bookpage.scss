@@ -1,10 +1,103 @@
 .book-page {
-    padding: 20px;
-    text-align: center;
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
 
-    img {
-        max-width: 400px;
-        height: auto;
-        margin: 20px auto;
+    .book-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #007bff;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .book-content {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+
+        .book-image {
+            flex: 0 0 200px;
+            max-width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-info {
+            flex: 1;
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin-bottom: 10px;
+            }
+
+            strong {
+                color: #495057;
+            }
+        }
+    }
+
+    .book-actions {
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            padding: 0;
+
+            img {
+                width: 32px;
+                height: 32px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &.icon-button-active {
+                img {
+                    filter: brightness(0.8) sepia(1) hue-rotate(-30deg) saturate(2);
+                }
+            }
+        }
+    }
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+
+    .image-modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
     }
 }

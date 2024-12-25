@@ -17,7 +17,7 @@ export function HomePage() {
 
     return (
         <div className="home-page">
-            <h1>Новые Релизы</h1>
+            <h1>New Releases Books</h1>
             <div className="book-list">
                 {newReleases.map((book) => (
                     <BookCard key={book.isbn13} book={book} />

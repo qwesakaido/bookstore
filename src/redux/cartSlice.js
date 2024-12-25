@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     items: [],
+    modalImage: null,
 }
 
 const cartSlice = createSlice({
@@ -23,8 +24,14 @@ const cartSlice = createSlice({
         clearCart(state) {
             state.items = []
         },
+        openModal(state, action) {
+            state.modalImage = action.payload
+        },
+        closeModal(state) {
+            state.modalImage = null
+        },
     },
 })
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions
+export const { addToCart, removeFromCart, clearCart, openModal, closeModal } = cartSlice.actions
 export default cartSlice.reducer
