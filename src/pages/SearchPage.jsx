@@ -1,7 +1,7 @@
 import '../styles/searchpage.scss'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchBooksByTitle } from '../store/booksSlice'
+import { fetchBooksByTitle } from '../redux/booksSlice'
 import { BookCard } from '../components/BookCard'
 
 export function SearchPage() {

@@ -1,9 +1,9 @@
 import '../styles/bookpage.scss'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchBookDetails } from '../store/booksSlice'
-import { addToFavorites, removeFromFavorites } from '../store/favoritesSlice'
-import { addToCart } from '../store/cartSlice'
+import { fetchBookDetails } from '../redux/booksSlice'
+import { addToFavorites, removeFromFavorites } from '../redux/favoritesSlice'
+import { addToCart } from '../redux/cartSlice'
 import { useParams } from 'react-router-dom'
 
 export function BookPage() {

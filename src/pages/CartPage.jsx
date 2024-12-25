@@ -1,6 +1,6 @@
 import '../styles/cart.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeFromCart, clearCart } from '../store/cartSlice'
+import { removeFromCart, clearCart } from '../redux/cartSlice'
 
 export function CartPage() {
     const dispatch = useDispatch()

@@ -1,7 +1,7 @@
 import '../styles/homepage.scss'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchNewReleases } from '../store/booksSlice'
+import { fetchNewReleases } from '../redux/booksSlice'
 import { BookCard } from '../components/BookCard'
 
 export function HomePage() {

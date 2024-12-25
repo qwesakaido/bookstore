@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { login } from '../store/authSlice'
+import { login } from '../redux/authSlice'
 import '../styles/login.scss'
 
 export function LoginPage() {
