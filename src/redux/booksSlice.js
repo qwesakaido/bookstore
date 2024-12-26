@@ -13,10 +13,17 @@ export const fetchBookDetails = createAsyncThunk('books/fetchBookDetails', async
     return response.data
 })
 
-export const fetchBooksByTitle = createAsyncThunk('books/fetchBooksByTitle', async ({ title, page }) => {
-    const response = await axios.get(`${API_BASE}/search/${title}/${page}`)
-    return response.data
-})
+export const fetchBooksByTitle = createAsyncThunk(
+    'books/fetchBooksByTitle',
+    async ({ title, page }, { rejectWithValue }) => {
+        try {
+            const response = await axios.get(`${API_BASE}/search/${encodeURIComponent(title)}/${page}`)
+            return response.data
+        } catch (error) {
+            return rejectWithValue(error.response?.data?.error || error.message)
+        }
+    }
+)
 
 const booksSlice = createSlice({
     name: 'books',
@@ -38,9 +45,17 @@ const booksSlice = createSlice({
                 state.bookDetails = action.payload
                 state.status = 'succeeded'
             })
+            .addCase(fetchBooksByTitle.pending, (state) => {
+                state.status = 'loading'
+                state.error = null
+            })
             .addCase(fetchBooksByTitle.fulfilled, (state, action) => {
                 state.searchResults = action.payload
                 state.status = 'succeeded'
+            })
+            .addCase(fetchBooksByTitle.rejected, (state, action) => {
+                state.status = 'failed'
+                state.error = action.payload || 'An error occurred'
             })
             .addCase(fetchNewReleases.pending, (state) => {
                 state.status = 'loading'

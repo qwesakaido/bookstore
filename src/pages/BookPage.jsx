@@ -6,7 +6,6 @@ import { addToFavorites, removeFromFavorites } from '../redux/favoritesSlice'
 import { addToCart, openModal, closeModal } from '../redux/cartSlice'
 import { useParams } from 'react-router-dom'
 
-// Импорты ваших иконок
 import bookmark from '../assets/bookmark.svg'
 import minus from '../assets/minus.svg'
 import plus from '../assets/plus.svg'

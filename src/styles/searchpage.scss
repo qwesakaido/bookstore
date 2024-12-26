@@ -15,15 +15,16 @@
   }
 
   button {
-    background-color: #4caf50;
+    background-color: #313037;
     color: white;
     border: none;
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s;
 
     &:hover {
-      background-color: #45a049;
+      background-color: #ccc;
     }
   }
 }
