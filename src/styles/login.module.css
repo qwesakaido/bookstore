@@ -1,0 +1,49 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.loginForm {
+    padding: 10px 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.loginForm h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.loginForm input,
+.loginForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.loginForm input {
+    transition: border-color 0.3s;
+}
+
+.loginForm input:focus {
+    border-color: #313037;
+    outline: none;
+}
+
+.loginForm button {
+    background-color: #313037;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.loginForm button:hover {
+    background-color: #555;
+}

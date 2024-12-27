@@ -1,0 +1,58 @@
+.favoritesPage {
+    padding: 20px;
+}
+
+.favoritesPage h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.emptyMessage {
+    font-size: 1.2rem;
+    color: #888;
+    text-align: center;
+}
+
+.favoritesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.favoriteItem {
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+}
+
+.favoriteItem:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.favoriteImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.favoriteDetails {
+    margin-top: 10px;
+}
+
+.favoriteDetails h2 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.viewDetails {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.viewDetails:hover {
+    text-decoration: underline;
+}

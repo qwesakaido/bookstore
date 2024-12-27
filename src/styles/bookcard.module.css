@@ -1,0 +1,29 @@
+.bookCard {
+    padding: 10px;
+    text-align: center;
+}
+
+.bookCard .bookImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.bookCard .bookTitle {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.bookCard .bookSubtitle {
+    font-size: 14px;
+    color: #555;
+}
+
+.bookCard .bookDetailsLink {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.bookCard .bookDetailsLink:hover {
+    text-decoration: underline;
+}
